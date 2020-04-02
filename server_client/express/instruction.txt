@@ -1,0 +1,4 @@
+1, to run server.js, we should install express first
+   1.1, in cmd in the correct directory,  run "npm install express"
+2, start server by "node server"
+3, launch "localhost:8081" in browser
