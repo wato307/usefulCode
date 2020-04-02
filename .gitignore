@@ -1,0 +1,3 @@
+# ignore the auto-generated files after running 'npm install express' 
+node_modules
+package-lock.json
