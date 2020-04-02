@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>SVG Drag Study</title>	
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+        <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+        <!--script type="text/javascript" src="http://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>-->
+        <script type="text/javascript" src="js/dragjs.js"></script>
+    </head>
+    <body>
+        <h1 id="title">This is a study for SVG drag</h1>
+        <p>Source Container:</p>
+        <div id="srcContainer">			
+            <img id="srcImg" class="draggable" src="images/img_flwr.gif" alt="flower" title="This is an img flower"/img>
+            <svg id="srcSvg" class="draggable" width="200" height="150" xmlns="http://www.w3.org/2000/svg" version="1.1" >
+                <g id="01"><circle cx="100" cy="50" r="40" stroke="black" stroke-width="2" fill="red"></circle>	</g>
+                <g id="02"><circle cx="100" cy="90" r="40" stroke="green" stroke-width="2" fill="blue"></circle></g>
+            </svg>
+            <p id="srcP" class="draggable" draggable="true">this is a paragraph<p>
+        </div>
+        
+        <p>Target Container:</p>
+        <div id="tarContainer">
+            
+        </div>
+    <body>
+</html>

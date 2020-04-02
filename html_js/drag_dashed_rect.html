@@ -1,0 +1,74 @@
+<html> 
+    <head> 
+        <title> 
+            dashedBox 
+        </title> 
+        <script language="javascript"> 
+            var beginX;
+            var beginY; 
+            var drawable; 
+        
+            function beforeDrawDashedBox(){ 
+                drawable=true; 
+                beginX=event.clientX; 
+                beginY=event.clientY; 
+                //alert("before"); 
+            } 
+        
+            function getDashedBox(){ 
+                var dashedBox=document.getElementById("dashedBox"); 
+                return dashedBox; 
+            } 
+        
+            function clearDashedBox(){ 
+                if(getDashedBox()!=null){ 
+                    document.body.removeChild(getDashedBox()); 
+                } 
+            } 
+        
+            function drawBox(top,right,buttom,left){ 
+                var relLeft=left<right?left:right; 
+                var relTop=top<buttom?top:buttom; 
+                var relWidth=Math.abs(right-left); 
+                var relHeight=Math.abs(buttom-top); 
+                    
+                var divEl=document.createElement("div"); 
+                divEl.id="dashedBox"; 
+                divEl.style.position="absolute"; 
+                divEl.style.border="1px BLUE dashed"; 
+                divEl.style.left=relLeft; 
+                //divEl.style.backgroundColor="blue"; 
+                divEl.style.filter="alpha(opacity=10)"; 
+                divEl.style.top=relTop; 
+                divEl.style.width=relWidth; 
+                divEl.style.height=relHeight; 
+                document.body.appendChild(divEl); 
+            } 
+        
+            function inDrawDashedBox(){ 
+                if(drawable==true){ 
+                    clearDashedBox(); 
+                    drawBox(beginY,beginX,event.clientY,event.clientX); 
+                } 
+            } 
+        
+            function afterDrawDashedBox(){ 
+                drawable=false; 
+                clearDashedBox(); 
+            } 
+        
+            function loadDashdBoxFn (){ 
+                document.onmousedown=beforeDrawDashedBox; 
+                document.onmousemove=inDrawDashedBox; 
+                document.onmouseup=afterDrawDashedBox; 
+            } 
+        
+            window.onload=loadDashdBoxFn; 
+        
+        </script> 
+    </head> 
+    <body> 
+        <h2>This is a test for drag_dashed_rectangular</h2>
+        <p>mouse down then drag, a rectangle will show</p>
+    </body> 
+</html>

@@ -1,0 +1,23 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/usr/lib/gcc/x86_64-pc-cygwin/7.4.0/include/c++",
+                "/usr/lib/gcc/x86_64-pc-cygwin/7.4.0/include/c++/x86_64-pc-cygwin",
+                "/usr/lib/gcc/x86_64-pc-cygwin/7.4.0/include/c++/backward",
+                "/usr/lib/gcc/x86_64-pc-cygwin/7.4.0/include",
+                "/usr/include",
+                "/usr/lib/gcc/x86_64-pc-cygwin/7.4.0/../../../../lib/../include/w32api"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "intelliSenseMode": "msvc-x64"
+        }
+    ],
+    "version": 4
+}

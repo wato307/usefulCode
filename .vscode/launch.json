@@ -1,0 +1,51 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [        
+        {
+            "name": "(gdb) launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
+            "miDebuggerPath": "gdb.exe",
+            "args": [],//command line arguments passed to the program (should be string)
+            "stopAtEntry": false, 
+            "cwd": "${workspaceFolder}",
+            "environment": [],  
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "preLaunchTask":""
+        },
+        {
+            "name": "Python: current py",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": []
+        },
+        {
+            "name": "nodejs: current js",
+            "type": "node",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Chrome: current html",
+            "type": "chrome",
+            "request": "launch",
+            "file":"${file}"
+        }/*,
+        {
+            "name": "Launch Chrome against localhost",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceRoot}"
+        }*/
+
+    ]
+}

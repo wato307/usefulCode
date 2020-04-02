@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>Table对象的属性</title>
+</head>
+<body>
+<h2>Table对象的属性</h2>
+<hr>
+<table id="myTable" border=1>
+<tr>
+   <td><img src="../Images/mail.png"> </td>
+   <td>CSS</td>
+</tr>
+<tr>
+   <td>JavaScript</td>
+   <td>VBScript</td>
+</tr>
+</table>
+<form>
+<input type="button" onclick="document.all[6].border=6;" value="border size">
+<input type="button" onclick="myTable.frame='above';" value="only show above frame">
+<input type="button" onclick="myTable.cellPadding='10';" value="change cellPadding">
+<input type="button" onclick="myTable.cellSpacing='10';" value="change cellSpacing">
+</form>
+</body>
+</html>

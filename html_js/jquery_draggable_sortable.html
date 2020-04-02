@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>jQuery UI Draggable + Sortable</title>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        
+        <style type="text/css">
+            #alignmentPriorityList{
+                display:block;
+                border:1px solid red;
+                margin:100px auto;
+                padding:0px;
+                width:200px;
+                text-align:left;
+                box-shadow: 3px 3px 1px #888;
+            }
+            li{
+                cursor:move;
+            }
+        </style>
+        <script>
+            $(function(){
+
+                $("#alignmentPriorityList").sortable({
+                    revert:true, //Whether the sortable items should revert to their new positions using a smooth animation.
+                                 //  Boolean: When set to true, the items will animate with the default duration.
+                                 //  Number: The duration for the animation, in milliseconds.
+                    cursor:"move",
+                    opacity: 0.7
+                });
+                // var parent_node;
+                // var current_li;
+                // var insert_before;
+                
+                // $("#alignmentPriorityList li").on("dragstart", function(ev){
+                //     var parent = this.parentElement;
+                //     if(parent.id === "alignmentPriorityList"){
+
+                //         ev.originalEvent.dataTransfer.effectAllowed = "move";
+                //         ev.originalEvent.dataTransfer.setData("text", ev.target.innerHTML);
+                //         ev.originalEvent.dataTransfer.setDragImage(ev.target, 0, 0);
+                //         current_li = ev.target;
+                //         parent_node = parent;
+                //         return true;
+                //     }
+                // });
+
+                // $("#alignmentPriorityList li").on("dragend", function(ev){
+                //     ev.originalEvent.dataTransfer.clearData("text");
+
+                //     if(insert_before !== current_li){
+                //         parent_node.removeChild(current_li);
+                //         parent_node.insertBefore(current_li, insert_before);
+                //     }
+
+                //     current_li = null;
+                //     return false
+                // });
+
+                // $("#alignmentPriorityList li").on("dragover", function(ev){
+                //     //$(this).css("text-decoration", "underline");
+                //     //if(this.nextElementSibling){
+                //     //    $(this.nextElementSibling).css("text-decoration", "overline");
+                //     //}
+                //     insert_before = this.nextSibling;
+                // });
+
+                // $("#alignmentPriorityList li").on("dragleave", function(ev){
+                //     $(this).css("text-decoration", "none");
+                //     if(this.nextElementSibling){
+                //         $(this.nextElementSibling).css("text-decoration", "none");
+                //     }
+                // });
+
+            });
+        </script>
+    </head>
+    <body>
+        <ul id="alignmentPriorityList">
+            <li draggable="true"><input type="checkbox" checked>Item 1111</li>
+            <li draggable="true"><input type="checkbox">Item 2</li>
+            <li draggable="true"><input type="checkbox" checked>Item 3</li>
+            <li draggable="true"><input type="checkbox" checked>Item 444444444</li>
+            <li draggable="true"><input type="checkbox" checked>Item 5</li>
+        </ul>
+
+    </body>
+</html>

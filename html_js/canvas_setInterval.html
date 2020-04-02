@@ -1,0 +1,40 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" dir="ltr" lang="utf-8">  
+    <head>  
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+        <script src="https://s1.pstatp.com/cdn/expire-1-M/jquery/3.4.0/jquery.min.js" type="text/javascript"></script>       
+    </head>  
+
+    <body>  
+        <canvas id="canvas" width="512" height="512" style="background-color: rgb(222, 222, 222)">
+            your browser does not support canvas.
+        </canvas>
+
+        <script type="text/javascript"> 
+            var x=0,y=0,dx=20,dy=30,canvas, context2D;   //the ball moves starting from (0,0), delta moving distance is 20 in x axis and 30 in y axis
+          
+            function drawCircle(x,y){
+                context2D.beginPath();
+                context2D.fillStyle = "red";
+                context2D.arc(x,y,10,0, 2*Math.PI);
+                context2D.fill();
+            }
+
+            function draw(){ 
+                context2D.clearRect(0, 0, canvas.width, canvas.height);   // clear canvas area
+                drawCircle(x, y);         // draw a circle at the given location
+                  
+                // adjust moving direction according to current position
+                if (x + dx > canvas.width || x + dx < 0) dx = -dx; 
+                if (y + dy > canvas.height || y + dy < 0) dy = -dy; 
+                x += dx; 
+                y += dy; 
+            } 
+
+            window.onload = function (){ 
+                canvas = document.getElementById('canvas'); 
+                context2D = canvas.getContext('2d'); 
+                setInterval(draw, 50);     // draw per 50 msec
+            } 
+        </script> 
+    </body>  
+</html> 

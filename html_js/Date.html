@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple Test</title>
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"> </script>
+	<style type="text/css">
+	    #htext{
+		   color: red; 
+		}
+	</style>
+	<script>
+		$(document).ready(function(){
+		     setInterval(function(){
+			     $('#htext').html(Date());
+			 }, 500);		    
+	    })	
+	</script>
+</head>
+
+<body>
+	<div>
+		<h1 id='htext'> </h1>
+	</div>
+</body>
+
+<html>

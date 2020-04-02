@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>This is a test for embed svg</h2>
+    <div id="container" style="background-color:gray; width:500px; height:500px">
+        <!--embed src = "a1.svg" type="image/svg+xml"/>-->
+        <!--object id="svgembed"  type="image/svg+xml"></object-->
+    </div>
+    <button onclick="showSvg()">Show SVG</button>
+
+    <script>
+        var cntr = document.getElementById("container");
+        //var templ = cntr.createElement("embed");
+        //if(templ)
+        //{
+        //  templ.src = "a1.svg";
+        //}
+
+        showSvg = function(){    
+            //var svgEmbed = document.getElementById("svgembed");
+            //alert(svgEmbed);
+            //svgEmbed.data="a1.svg";
+            alert(cntr);
+            var templ = document.createElement("object");
+            alert(templ);
+            if(templ){      
+                templ.data = "a1.svg";
+                templ.type = "image/svg+xml";
+                cntr.appendChild(templ);
+            }
+        }
+
+        //<embed src = "a1.svg" type="image/svg+xml"/>
+
+    </script>
+
+
+    </body>
+</html>

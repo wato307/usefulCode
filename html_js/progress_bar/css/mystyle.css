@@ -1,0 +1,5 @@
+.progress{width:200px; height:20px; border:4px solid #f00; border-radius:10px;overflow:hidden;position:relative; margin:100 auto;}
+
+.progress #prog_1 {width:4px; height:20px; transform:skewX(-20deg); background-color:green;position:absolute;left:0px;}
+.progress #prog_2 {width:4px; height:20px; transform:skewX(-20deg); background-color:green;position:absolute;left:10px;}
+.progress #prog_3 {width:4px; height:20px; transform:skewX(-20deg); background-color:green;position:absolute;left:20px;}
